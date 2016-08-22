@@ -604,7 +604,7 @@ define(['jquery', 'underscore', 'backbone', 'templates', 'helpers/graph-utils', 
         // Request the available inode capacity per OSD ID.
         makeHostDeviceDiskSpaceInodes: function(hostname, id) {
             this.updateBtns(id);
-            return this.makePerHostModelGraphs(hostname, 'makeDiskSpaceInodesGraphUrl', this.getOSDIDs());
+            return this.makePerHostModelGraphs(hostname, 'makeDiskSpaceInodesGraphUrl', this.getOSDIDs(), this.collection.clusterName);
         },
         // **makeHostNetworkBytesMetrics**
         // Find the ethernet device names per FQDN.
